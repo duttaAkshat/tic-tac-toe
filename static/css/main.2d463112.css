@@ -1,0 +1,2 @@
+body{background:#df9c9c;font-family:sans-serif;text-align:center}.container{margin-top:50px}.board{grid-gap:5px;display:grid;gap:5px;grid-template-columns:repeat(3,100px);justify-content:center;margin:20px 0}.cell{background:#c1f7d0;border:2px solid #333;cursor:pointer;font-size:2rem;height:100px;transition:background .2s;width:100px}.cell:hover{background:#ddd}button{background:#cdc4f7;font-size:1rem;margin:5px;padding:10px 20px}
+/*# sourceMappingURL=main.2d463112.css.map*/
