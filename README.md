@@ -3,7 +3,7 @@
 A classic Tic Tac Toe game built with **React**, featuring an **AI opponent powered by the Minimax algorithm**.
 
 ## Live Demo
-👉 [Play Here](https://your-deployed-link.vercel.app/)
+👉 [Play Here](https://duttaakshat.github.io/tic-tac-toe/)
 
 ## Features
 - Two-player mode
