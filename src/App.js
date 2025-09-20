@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
+import { FaGithub } from "react-icons/fa";
 import "./index.css";
 
 const EMPTY = "_";
@@ -92,10 +93,10 @@ function App() {
 
     let winner = checkWinner(newGrid);
     if (winner) {
-      setMessage(`${winner === "O" ? "Player A" : singlePlayer ? "Computer" : "Player B"} won!`);
+      setMessage(`${winner === "O" ? "Player 1" : singlePlayer ? "Computer" : "Player 2"} won!!`);
       return;
     } else if (!isMovesLeft(newGrid)) {
-      setMessage("Yarr maja nahi aaya! Draw ho gaya bc");
+      setMessage("Its a draw...");
       return;
     }
 
@@ -111,9 +112,9 @@ function App() {
         setGrid(newGrid);
         const winner2 = checkWinner(newGrid);
         if (winner2) {
-          setMessage("Chutiya hai kya?? Computer se haar gaya!!");
+          setMessage("You Lost😢!!");
         } else if (!isMovesLeft(newGrid)) {
-          setMessage("Yarr maja nahi aaya! Draw ho gaya bc");
+          setMessage("Its a draw...");
         }
         setTurn("O");
       }, 200); // slight delay for realism
@@ -134,9 +135,26 @@ function App() {
   if (singlePlayer === null) {
     return (
       <div className="container">
-        <h1>Tic-Tac-Toe</h1>
+        <h1 className="heading">Tic-Tac-Toe</h1>
+        <h1>Choose your mode</h1>
         <button onClick={() => setSinglePlayer(true)}>Single Player</button>
         <button onClick={() => setSinglePlayer(false)}>Multiplayer</button>
+        <br></br>
+        <br></br>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPPLHjLogizHYQudXNKuPYYaN_OTzfN2xosA&s"
+        alt="Tic Tac Toe"
+        className="home-image"
+      />
+
+      <a
+      href="https://www.github.com/duttaAkshat/tic-tac-toe"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="github-float"
+    >
+      <FaGithub size={30} />
+    </a>
       </div>
     );
   }
@@ -154,7 +172,7 @@ function App() {
         )}
       </div>
       {message && <h2>{message}</h2>}
-      <button onClick={resetGame}>Reset Game</button>
+      <button onClick={resetGame}>Go Back</button>
     </div>
   );
 }
